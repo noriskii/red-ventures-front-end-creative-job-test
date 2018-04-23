@@ -1,0 +1,25 @@
+{
+  "name": "rv-hotel",
+  "version": "1.0.0",
+  "description": "red-ventures-front-end-creative-job-test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noriskii/red-ventures-front-end-creative-job-test.git"
+  },
+  "keywords": [
+    "job-test",
+    "front-end",
+    "web-development"
+  ],
+  "author": "Lucas Augusto Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noriskii/red-ventures-front-end-creative-job-test/issues"
+  },
+  "homepage": "https://github.com/noriskii/red-ventures-front-end-creative-job-test#readme"
+}
