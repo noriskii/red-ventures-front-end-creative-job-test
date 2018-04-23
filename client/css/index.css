@@ -1,0 +1,45 @@
+/*Celular*/
+/*@media (max-width: 768px) {
+    html {
+        font-size: 208px;
+    }
+}*/
+.main-box {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-top {
+    font-family: 'Heebo', sans-serif;
+
+}
+
+.navbar-top > .item {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0.5em 0.5em;
+    color: #FFF;
+}
+
+/*Tablets*/
+@media (min-width: 640px) and (max-width: 1199.98px) {
+    .navbar-top > .item {
+        width: auto;
+        display: inline-block;
+        padding: 1.25em 0.5em;
+    }    
+}
+
+
+/*Notebooks and Plus*/
+@media (min-width: 1200px) {
+    .navbar-top > .item {
+        width: auto;
+        display: inline-block;
+        padding: 1.25em 0.5em;
+        margin-left: 2.5%;
+    }    
+}

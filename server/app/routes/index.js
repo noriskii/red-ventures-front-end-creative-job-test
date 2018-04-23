@@ -3,7 +3,7 @@
 var api = require('../api');
 
 module.exports  = function(app) {
-    
+    /*
     app.route('/components/buttons')
         .get(api.xxx);
         
@@ -15,4 +15,5 @@ module.exports  = function(app) {
         
     app.route('/components')
         .get(api.xyz);          
+    */
 };
