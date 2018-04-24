@@ -4,15 +4,23 @@
         font-size: 208px;
     }
 }*/
+body {
+    overflow-y: auto;
+}
+
 .main-box {
     background-image: url(../img/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 90%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: auto;
 }
 
 .navbar-top {
     font-family: 'Heebo', sans-serif;
-
 }
 
 .navbar-top > .item {
@@ -24,13 +32,80 @@
     color: #FFF;
 }
 
+
+.presentation-title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+}
+
+.presentation-title > .icon {
+    display: block;
+    background: url(../img/crown.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.presentation-title > .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    display: inline-block;
+    box-sizing: content-box;
+    font-weight: bolder;
+    color: #FFF;
+    margin: 0% 10%;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.presentation-title > .title::before {
+    content: 'WELCOME TO';
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFF;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.presentation-title > .title::after {
+    content: 'THE QUEEN CITY';
+    padding-top: 10px;
+    border-top: 2px solid #FFF;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
 /*Tablets*/
 @media (min-width: 640px) and (max-width: 1199.98px) {
+    .main-box {
+        height: 95%;
+    }
+
     .navbar-top > .item {
         width: auto;
         display: inline-block;
         padding: 1.25em 0.5em;
+    }
+
+    .presentation-title > .title {
+        font-size: 3em;
     }    
+
+    .footer-box {
+        font-size: 8px;
+    }
 }
 
 
@@ -42,4 +117,64 @@
         padding: 1.25em 0.5em;
         margin-left: 2.5%;
     }    
+    
+    .presentation-title > .title {
+        font-size: 5em;
+    }
+    
+    .footer-box {
+        font-size: 12px;
+    }
+}
+
+.footer-box {
+    font-family: 'Heebo', sans-serif;
+    color: #424242;
+    font-size: 7px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.social {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.social > .facebook {
+    display: inline-block;
+    background: url(../img/facebook.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    padding-bottom: 5px;
+}
+
+.social > .twitter {
+    display: inline-block;
+    background: url(../img/twitter.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    padding-bottom: 5px;
+}
+
+.social > .instagram {
+    display: inline-block;
+    background: url(../img/instagram.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    padding-bottom: 5px;
+}
+
+.footer-box > .copyright {
+    position: relative;
+    margin: auto;
+    text-align: center;
 }
