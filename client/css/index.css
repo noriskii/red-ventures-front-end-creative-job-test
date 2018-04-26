@@ -179,6 +179,61 @@
     margin: auto;
 }
 
+.hotel-box {
+    background-color: #FFF;
+    font-family: 'Heebo', sans-serif;
+    padding-bottom: 2%;
+}
+
+.hotel-box > .filter-box { /**/ }
+
+.hotel-box > .hotel-card {
+    border: 1px solid #000;
+    width: 96%;
+    margin: auto;   
+}
+
+.hotel-card > .front-card {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+
+.front-card > .image{ 
+    width: 85px;
+}
+
+.front-card > .hotel-info {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.hotel-info > .title {
+    color: #FFBA23;
+    box-sizing: content-box;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-top: 1px;
+}
+
+.hotel-info > .description {
+    font-size: 10px;
+    justify-content: safe;
+}
+
+.front-card > .hotel-price {
+    border-left: 1px solid #424242;
+    width: 100px;
+    font-size: 8px;
+}
+
+.hotel-price > .nights {
+    font-size: 16px;
+}
+
+
+
 /*Tablets*/
 @media (min-width: 640px) and (max-width: 1199.98px) {
     .navbar-top > .item {
