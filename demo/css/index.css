@@ -21,6 +21,7 @@
     text-align: center;
     padding: 0.5em 0.5em;
     color: #FFF;
+    cursor: pointer;
 }
 
 
@@ -84,7 +85,7 @@
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
-    height: 60%;
+    height: 280px;
     margin-top: 20%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -145,6 +146,7 @@
     border-radius: 120px;
     border: 2px solid #FFBA23;
     color: #FFBA23;
+    cursor: pointer;
 }
 
 .check-form > .search:hover {
@@ -190,12 +192,21 @@
 .hotel-card > .front-card {
     display: flex;
     flex-direction: row;
-    height: 100px;
+    height: 125px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.25), 0 4px 24px rgba(0,0,0,0.22);
 }
 
-.front-card > .image{ 
+.front-card > .image { 
     width: 85px;
+}
+
+.hotel-info > .star {
+    display: inline-block;
+    background: url(../img/star-filled.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 4px;
 }
 
 .front-card > .hotel-info {
@@ -224,6 +235,7 @@
     border-radius: 120px;
     border: 2px solid #FFBA23;
     color: #FFBA23;
+    cursor: pointer;
 }
 
 .hotel-info > .book:hover {
@@ -237,6 +249,7 @@
     border: 2px solid #78BD1A;
     background-color: transparent;
     color: #78BD1A;
+    cursor: pointer;
 }
 
 .hotel-info > .shop:hover {
@@ -310,34 +323,30 @@
     background-color: #FFF;
 }
 
-.social > .facebook {
+.social > .icon {
     display: inline-block;
+    width: 4em;
+    height: 4em;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.social > .facebook {
     background: url(../img/facebook.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 4em;
-    height: 4em;
-    padding-bottom: 5px;
 }
 
 .social > .twitter {
-    display: inline-block;
     background: url(../img/twitter.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 4em;
-    height: 4em;
-    padding-bottom: 5px;
 }
 
 .social > .instagram {
-    display: inline-block;
     background: url(../img/instagram.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 4em;
-    height: 4em;
-    padding-bottom: 5px;
 }
 
 .footer-box > .copyright {
@@ -360,7 +369,7 @@
 
     .main-box {
         width: 80%;
-        height: 100%;
+        height: 400px;
         margin-top: 10%;
         margin-left: 10%;
         margin-right: 10%;
@@ -385,10 +394,15 @@
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
+    .hotel-info > .star {
+        width: 10px;
+        height: 10px;
+    }
     
     .footer-box {
         font-size: 8px;
-        height: 20%;
+        height: 100px;
     }
 }
 
@@ -408,6 +422,7 @@
 
     .main-box {
         width: 70%;
+        height: 350px;
         margin-top: 5%;
         margin-left: 15%;
         margin-right: 15%;
@@ -428,11 +443,21 @@
     }
     
     .hotel-card > .front-card {
-        height: 180px;
+        height: 200px;
     }
     
     .front-card > .image{ 
         width: 180px;
+    }
+
+    .hotel-info > .star {
+        width: 15px;
+        height: 15px;
+    }
+
+    .front-card > .hotel-info {
+        width: 95%;
+        margin-right: 50px;
     }
     
     .hotel-info > .title {
@@ -443,7 +468,7 @@
     
     .hotel-info > .description {
         font-size: 16px;
-        margin-bottom: 5%;
+        margin-bottom: 2%;
     }
     
     .hotel-info > .book {

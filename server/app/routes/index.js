@@ -5,15 +5,15 @@ var api = require('../api');
 module.exports  = function(app) {
     /*
     app.route('/components/buttons')
-        .get(api.xxx);
+        .get(api.buttons);
         
     app.route('/components/calendar')
-        .get(api.yyy);
+        .get(api.calendar);
         
     app.route('/components/formulario')
-        .get(api.zzz);  
+        .get(api.formulario);  
         
-    app.route('/components')
-        .get(api.xyz);          
+    app.route('/components/card')
+        .get(api.card);          
     */
 };

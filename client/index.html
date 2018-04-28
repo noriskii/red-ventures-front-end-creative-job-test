@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
+    <script src="js/polyfill/es6.js"></script>
+    <script src="js/polyfill/fetch.js"></script>
     <title>Charlotte - Visit The Queen City</title>
 </head>
 <body>
@@ -26,104 +27,49 @@
 
         <main class="main-box">
             <p class="title">Select the dates to stay in Charlotte</p>
-            <form class="check-form" action="">
-                <label class="label" for="">Check-In</label>
-                <label class="label" for="">Check-Out</label>
-                <input class="input" type="text" placeholder="Choose a date">
-                <input class="input" type="text" placeholder="Choose a date">
-                <button class="search">Search Hotels</button>
+            <form class="check-form" onsubmit="bookingController.pesquisa(event)">
+                <label class="label" for="dataInicio">Check-In</label>
+                <label class="label" for="dataFim">Check-Out</label>
+                <input id="dataInicio" class="input" type="text" placeholder="Choose a date" pattern="\d{2}\/\d{2}\/\d{4}" title="Insira no formato dd/mm/aaaa" required>
+                <input id="dataFim" class="input" type="text" placeholder="Choose a date" pattern="\d{2}\/\d{2}\/\d{4}" title="Insira no formato dd/mm/aaaa" required>
+                <button type="submit" class="search">Search Hotels</button>
             </form>
         </main>
 
-        <section class="message-box">
-            <p class="message">Best choices between {date-start} and {date-end}</p>
+        <section id="bookingView" class="message-box">
+
         </section>
 
-        <section class="hotel-box">
-            <aside class="filter-box">
-                <p class="title"></p>
-                <div class="price-filter">
-
-                </div>
-                <div class="star-filter">
-
-                </div>
-            </aside>
-
-            <article class="hotel-card">
-                <section class="front-card">
-                    <img class="image" src="https://www.raphaelfabeni.com.br/rv/test-resources/hotels/omni-charlotte.jpg" alt="">
-                    <div class="hotel-info">
-                        <span class="star">4 stars</span>
-                        <p class="title">Omni Charlotte Hotel</p>
-                        <p class="description">The Omni Charlotte Hotel envelopes you in ultimate comfort with a signature touch of genuine North Carolina hospitality.</p>
-                        <input type="submit" value="Book Now" class="book">
-                        <input type="button" value="Price History" class="shop">
-                    </div>
-                    <div class="hotel-price">
-                        <p class="nights">8 nights</p>
-                        <p class="price">3500.20</p>
-                        <p class="pernight">$280.50</p>
-                    </div>   
-                </section>
-                <!-- <section class="back-card">
-                    <div class="graph"></div>
-                </section> -->
-            </article>
-
-            <article class="hotel-card">
-                <section class="front-card">
-                    <img class="image" src="https://www.raphaelfabeni.com.br/rv/test-resources/hotels/omni-charlotte.jpg" alt="">
-                    <div class="hotel-info">
-                        <span class="star">4 stars</span>
-                        <p class="title">Omni Charlotte Hotel</p>
-                        <p class="description">The Omni Charlotte Hotel envelopes you in ultimate comfort with a signature touch of genuine North Carolina hospitality.</p>
-                        <input type="submit" value="Book Now" class="book">
-                        <input type="button" value="Price History" class="shop">
-                    </div>
-                    <div class="hotel-price">
-                        <p class="nights">8 nights</p>
-                        <p class="price">3500.20</p>
-                        <p class="pernight">$280.50</p>
-                    </div>   
-                </section>
-                <!-- <section class="back-card">
-                    <div class="graph"></div>
-                </section> -->
-            </article>
-
-            <article class="hotel-card">
-                <section class="front-card">
-                    <img class="image" src="https://www.raphaelfabeni.com.br/rv/test-resources/hotels/omni-charlotte.jpg" alt="">
-                    <div class="hotel-info">
-                        <span class="star">4 stars</span>
-                        <p class="title">Omni Charlotte Hotel</p>
-                        <p class="description">The Omni Charlotte Hotel envelopes you in ultimate comfort with a signature touch of genuine North Carolina hospitality.</p>
-                        <input type="submit" value="Book Now" class="book">
-                        <input type="button" value="Price History" class="shop">
-                    </div>
-                    <div class="hotel-price">
-                        <p class="nights">8 nights</p>
-                        <p class="price">3500.20</p>
-                        <p class="pernight">$280.50</p>
-                    </div>   
-                </section>
-                <!-- <section class="back-card">
-                    <div class="graph"></div>
-                </section> -->
-            </article>
+        <section id="hotelView" class="hotel-box">
             
         </section>
 
         <footer class="footer-box">
             <div class="social">
-                <span class="facebook"></span>
-                <span class="twitter"></span>
-                <span class="instagram"></span>
+                <span class="icon facebook"></span>
+                <span class="icon twitter"></span>
+                <span class="icon instagram"></span>
             </div>
             <p class="copyright">© 2004-2017 Visit Charlotte. All Rights Reserved. 500 S. College Street, Suite 300, Charlotte, NC 28202</p>
         </footer>
     </main>
+    <script src="js/models/Booking.js"></script>
+    <script src="js/models/BookingMessage.js"></script>
+    <script src="js/models/Hotel.js"></script>
+    <script src="js/models/ListaHoteis.js"></script>
+    <script src="js/helpers/Bind.js"></script>
+    <script src="js/helpers/DateHelper.js"></script>
+    <script src="js/views/View.js"></script>
+    <script src="js/views/BookingView.js"></script>
+    <script src="js/views/HotelView.js"></script>
+    <script src="js/services/ProxyFactory.js"></script>
+    <script src="js/services/HttpService.js"></script>
+    <script src="js/services/HotelService.js"></script>
+    <script src="js/controllers/BookingController.js"></script>
+    <script src=""></script>
+    <script>
+        var bookingController = new BookingController();
+    </script>
 
 </body>
 </html>
